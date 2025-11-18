@@ -40,7 +40,7 @@ void deleteFirst(ListMobil &L, address p);
 void deleteLast(ListMobil &L, address p);
 void deleteAfter(ListMobil &L, address prec, address &p);
 void printInfo(ListMobil L);
-void findSales(ListMobil L);
-void showAllSales(ListMobil L);
+void findMobil(ListMobil L);
+void showAllMobil(ListMobil L);
 #endif
 

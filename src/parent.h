@@ -37,6 +37,7 @@ void deleteFirst(ListSales &L, address p);
 void deleteLast(ListSales &L, address p);
 void deleteAfter(ListSales &L, address prec, address &p);
 void printInfo(ListSales L);
-
+void findSales(ListSales L);
+void showAllSales(ListSales L);
 
 #endif

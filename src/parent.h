@@ -19,6 +19,7 @@ typedef struct elmSales *address;
 struct elmSales {
     infotype info;
     address next;
+    address prev;
 };
 
 struct ListSales {
@@ -28,13 +29,14 @@ struct ListSales {
 
 // Primitif
 void createListSales(ListSales &L);
-address allocate();
-void insertFirst();
-void inserLast();
-void insertafter();
-void deleteFirst();
-void deleteLast();
-void deleteAfter();
-//halo testing
+address allocate(infotype x);
+void insertFirst(ListSales &L, address p);
+void inserLast(ListSales &L, address p);
+void insertafter(ListSales &L,address prec, address &p);
+void deleteFirst(ListSales &L, address p);
+void deleteLast(ListSales &L, address p);
+void deleteAfter(ListSales &L, address prec, address &p);
+void printInfo(ListSales L);
+
 
 #endif

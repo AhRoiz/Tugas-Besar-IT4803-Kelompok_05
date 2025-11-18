@@ -5,7 +5,6 @@
 #include <string>
 using namespace std;
 
-// Definisi Infotype Sales
 struct Sales {
     string idSales;
     string nama;
@@ -13,20 +12,32 @@ struct Sales {
     int targetPenjualan;
 };
 
-typedef Sales infotype:
+typedef Sales infotype;
 
-typedef struct elmSales *adrSales;
+typedef struct elmSales *address;
 
 struct elmSales {
     infotype info;
-    adrSales next;
+    address next;
+    address prev;
 };
 
 struct ListSales {
-    adrSales first;
+    address first;
+    address last;
 };
 
 // Primitif
 void createListSales(ListSales &L);
+address allocate(infotype x);
+void insertFirst(ListSales &L, address p);
+void inserLast(ListSales &L, address p);
+void insertafter(ListSales &L,address prec, address &p);
+void deleteFirst(ListSales &L, address p);
+void deleteLast(ListSales &L, address p);
+void deleteAfter(ListSales &L, address prec, address &p);
+void printInfo(ListSales L);
+void findSales(ListSales L);
+void showAllSales(ListSales L);
 
 #endif

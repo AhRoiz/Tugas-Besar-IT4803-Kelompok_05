@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-using std namespace;
+using namespace std;
 
 struct Parent {
     string id;            

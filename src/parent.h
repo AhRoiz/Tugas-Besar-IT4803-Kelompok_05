@@ -39,5 +39,5 @@ void deleteAfter(ListSales &L, address prec, address &p);
 void printInfo(ListSales L);
 void findSales(ListSales L);
 void showAllSales(ListSales L);
-
+//halo
 #endif

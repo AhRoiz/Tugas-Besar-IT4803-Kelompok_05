@@ -13,10 +13,12 @@ struct Sales {
     int targetPenjualan;
 };
 
+typedef Sales infotype:
+
 typedef struct elmSales* adrSales;
 
 struct elmSales {
-    Sales info;
+    infotype info;
     adrSales next;
 };
 
@@ -26,10 +28,5 @@ struct ListSales {
 
 // Primitif
 void createListSales(ListSales &L);
-adrSales createElmSales(string id, string nama, float rating, int target);
-void insertSales(ListSales &L, adrSales P);
-void deleteSales(ListSales &L, string id, adrSales &P); // P menampung node yang dihapus
-adrSales findSales(ListSales L, string id);
-void showAllSales(ListSales L);
 
 #endif

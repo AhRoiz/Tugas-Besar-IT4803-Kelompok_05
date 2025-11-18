@@ -5,33 +5,31 @@
 #include <string>
 using namespace std;
 
-struct Parent {
-    string id;            
-    string hostname;
-    string ip;
-    int uptimeHours;      
+// Definisi Infotype Sales
+struct Sales {
+    string idSales;
+    string nama;
+    float rating;
+    int targetPenjualan;
 };
 
-typedef struct elmlist *address;
+typedef struct elmSales* adrSales;
 
-typedef parent infotype;
-
-struct elmlist {
-    parent info;
-    address next;
-}
-
-struct ParentList {
-    address first;
+struct elmSales {
+    Sales info;
+    adrSales next;
 };
 
-// ADT Parent
-void createParentList(ParentList &L);
-Parent* allocateParent(const string &id, const string &hostname, const string &ip, int uptimeHours);
-void insertParent(ParentList &L, Parent* P);
-Parent* findParent(ParentList L, const string &id);
-bool deleteParent(ParentList &L, const string &id); // returns true if deleted
-void showAllParents(ParentList L);
+struct ListSales {
+    adrSales first;
+};
+
+// Primitif
+void createListSales(ListSales &L);
+adrSales createElmSales(string id, string nama, float rating, int target);
+void insertSales(ListSales &L, adrSales P);
+void deleteSales(ListSales &L, string id, adrSales &P); // P menampung node yang dihapus
+adrSales findSales(ListSales L, string id);
+void showAllSales(ListSales L);
 
 #endif
-

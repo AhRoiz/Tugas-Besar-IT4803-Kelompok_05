@@ -15,7 +15,7 @@ struct Sales {
 
 typedef Sales infotype:
 
-typedef struct elmSales* adrSales;
+typedef struct elmSales *adrSales;
 
 struct elmSales {
     infotype info;
